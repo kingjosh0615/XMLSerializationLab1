@@ -20,12 +20,12 @@ namespace Lab1
             emp.SSNumber = 123456789;
             emp.EntryDate = DateTime.Now;
 
-            Console.WriteLine($"Employee ID: {emp.ID} \nEmployee Name: {emp.Name}\n");
+            Console.WriteLine($"Employee ID: {emp.ID} \nEmployee Name: {emp.Name}\nEmployee SS#: {emp.SSNumber} \nDate Created: {emp.EntryDate}");
 
-            string FilePath = "C:\\Users\\WILES_JOSHUA\\source\\repos\\XMLSerializationLab1";
+            string FilePath = "C:/Users/WILES_JOSHUA/source/repos/XMLSerializationLab1/";
             string FileName = "josh.xml";
 
-            StreamWriter writer = new StreamWriter(FileName + FilePath);
+            StreamWriter writer = new StreamWriter(FilePath + FileName);
 
             XmlSerializer ser = new XmlSerializer(typeof(Employee));
 
